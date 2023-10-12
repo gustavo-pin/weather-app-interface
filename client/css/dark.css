@@ -1,0 +1,29 @@
+:root{
+    --gray: #242424;
+}
+
+input.toggle-theme:checked + label{
+    background-color: var(--gray);
+}
+
+input:checked + label::after{
+    left: 67px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active::after{
+    width: 260px;
+}
+
+input:checked + label ion-icon.sun{
+    color: #fff;
+}
+
+input:checked + label ion-icon.moon{
+    color: #FFD953  ;
+}
+
+.dark-theme{
+    background-color: var(--gray);
+}
