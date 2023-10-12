@@ -24,6 +24,6 @@ input:checked + label ion-icon.moon{
     color: #FFD953  ;
 }
 
-.dark-theme{
-    background-color: var(--gray);
+input:checked + .weather-box{
+    color: #7C7C7C;
 }
