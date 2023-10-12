@@ -1,28 +1,19 @@
-const body = document.querySelector('body');
-const header = document.querySelector('header');
-const searchInput = document.querySelector('#city');
-const weatherBox = document.querySelectorAll('.weather-box');
+const toggleThemeBtn = document.querySelector('.toggle-theme');
 
-const toggleThemeButton = document.querySelector('#toggle-theme');
+const lightDarkTheme = document.querySelectorAll('.dark-light-theme');
+const inputCity = document.querySelector('#city');
+const darkTheme = document.querySelector('.section');
 
-const allItems = [body, header, searchInput, weatherBox];
 
-toggleThemeButton.addEventListener('change', ()=>{
-    if(toggleThemeButton.checked){
-        addDarkTheme();
+toggleThemeBtn.addEventListener('change', () => {
+    if(toggleThemeBtn.checked){
+        lightDarkTheme.forEach(element => {element.style.background = '#242424'});
+        inputCity.style.background = '#D9D9D9';
+        inputCity.style.color = '#404040'
+        darkTheme.style.background = '#090909'
     }else{
-        removeDarkTheme();
+        lightDarkTheme.forEach(element => {element.style = ''});
+        inputCity.style = ''
+        darkTheme.style = ''
     }
-})
-
-function addDarkTheme(){
-    allItems.forEach(item => {item.classList.add('dark-theme')})
-}
-
-function removeDarkTheme(){
-    allItems.forEach(item => {item.classList.remove('dark-theme')})
-}
-
-allItems.forEach(item => {
-    console.log(item)
 })
