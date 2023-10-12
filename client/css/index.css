@@ -3,16 +3,22 @@
 :root{
     --blue: #6BA3C2;
     --light-blue: #97B2C0;
-
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.1s ease;
 }
 
 body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+    width: 100vw;
     font-family: 'Khula', sans-serif;
 }
 
@@ -21,6 +27,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 27px;
+    width: 100%;
     height: 63px;
     background-color: #6BA3C2;;
 }
@@ -93,6 +100,7 @@ label.toggle-theme ion-icon.moon{
 }
 
 section{
+    padding-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,6 +170,7 @@ ion-icon.search-btn{
 
 .weather-box:hover{
     transform: perspective(200px) translateZ(30px);
+    color: #e8e8e8;
 }
 
 p.degrees{
@@ -183,4 +192,10 @@ p.city-name{
 
 span.data{
     font-size: 1rem;
+}
+
+footer.footer{
+    width: 100%;
+    height: 186px;
+    background-color: var(--blue);
 }
